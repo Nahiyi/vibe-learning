@@ -1,0 +1,41 @@
+{
+  "skill_name": "vibe-learning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我学了点 Vue3 ，写了一个待办列表组件，但有个 bug：有时候我修改了任务内容，页面上的文字却没变。\n\n我的代码大概是：\n```javascript\nlet todo = { text: '买水果', done: false }\nfunction updateText(newText) {\n  todo.text = newText\n}\n```\n\n我用的是 Vue3，但没用 ref 或 reactive，直接用普通对象，为什么不生效？",
+      "expected_output": "使用控制变量法对比普通对象 vs ref vs reactive；讲解 Vue3 响应式原理（Proxy）；不直接给完整修复代码；以引导为主；教用户判断这属于哪类问题（死磕原理还是先记住即可）",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我要做一个完整的用户注册登录功能，包括表单验证、数据库存储、密码加密、JWT token 生成、前端登录状态管理。你能直接帮我写出来吗？最好是可以直接跑的那种，我赶时间。",
+      "expected_output": "触发警戒模式；不直接给完整代码；要求用户提供自己的伪代码或实现思路；根据上下文判断用户是想快速上手项目还是想深入学习技术",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我看了好几篇讲 IoC 控制反转和 DI 依赖注入的文章，越看越迷糊，面试也经常问到。能用代码给我讲清楚吗？最好从为什么需要这个机制开始讲，不要一上来就给我一堆术语。",
+      "expected_output": "从问题根源出发讲清楚为什么需要 IoC/DI；用代码示例（不超过5-8行）；判断这是死磕类知识；讲解后自然询问是否要测试题",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "我在一个 Vue3 项目里看到两行代码，不知道有什么区别：\n\n```javascript\nconst count1 = ref(0)\nconst count2 = reactive({ value: 0 })\n```\n\n我查了文档但还是不理解什么情况下该用哪个。能解释一下吗？",
+      "expected_output": "讲解 ref vs reactive 的底层区别（RefImpl vs Proxy）；说明适用场景差异；不直接给结论，而是用苏格拉底式提问引导用户自己思考；最后自然附带测试询问",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "我写了这样一段 Java 代码，想法是开启两个线程同时给共享变量加一，预期结果是2000，但每次跑出来结果都不一样，有时候还不到2000：\n\n```java\npublic class Counter {\n    private int count = 0;\n    public void add() {\n        count++;\n    }\n}\n\n// 两个线程各调用1000次 add()\n```\n\n这是为什么？我加过 synchronized 但效果不对。",
+      "expected_output": "使用控制变量法分析并发问题（普通 int vs AtomicInteger vs synchronized）；讲解 Java 内存模型、可见性、原子性；指出用户代码的核心问题；最后推荐最佳实践",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "我在用 Spring Boot，有个 @Autowired 注解，我每次都是直接用，但最近有个面试问我@Resource 和 @Autowired 的区别，我答不上来。能不能讲讲这两个到底有什么区别？我之前都是背的，想真正理解。",
+      "expected_output": "讲解 @Autowired（byType）和 @Resource（byName）的底层区别；判断这是记忆类还是原理类知识；说明什么场景下该优先用哪个；讲解后询问是否需要测试",
+      "files": []
+    }
+  ]
+}
